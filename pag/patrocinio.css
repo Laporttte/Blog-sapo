@@ -1,0 +1,190 @@
+@import url('https://i0.wp.com/pm1.narvii.com/6273/e07633ef5a3d39e1af4469b16b684a9ad26a0592_hq.jpg');
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-image: url(https://i0.wp.com/pm1.narvii.com/6273/e07633ef5a3d39e1af4469b16b684a9ad26a0592_hq.jpg);
+    
+}
+
+header {
+    z-index: 1;
+}
+.logo:hover, .logo a:hover {
+    scale: 1.3;
+    color:rgb(28, 71, 190);
+    
+}
+.logo   {
+    transition: 0.5s all ease-in-out;
+    position: fixed;
+    list-style-type: none;     /* tira o estilo lista*/
+    text-decoration: none;
+    font-style: italic;
+    font-weight: 900;
+    font-family: 'Poppins', sans-serif;   
+    font-size: 35px;
+    z-index: 1;
+    margin-left: 3%;
+    text-shadow: 2px 2px 5px rgb(255, 255, 255);   /*desfoque e shadow*/
+}
+
+.menu ul { 
+    text-shadow: 0 2px 9px rgb(255, 255, 255);   /*desfoque e shadow*/
+    justify-content: space-between;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bolder;
+    position: fixed;
+    right: 35px; /* move o menu 30% fora da direita (relativo)*/
+    display: flex ;
+    text-transform: uppercase; /*deixa o texto maiusculo*/
+    list-style-type: none;     /* tira o estilo lista*/
+    text-decoration: none;
+    font-size: 115;
+}
+.menu ul li { 
+    justify-content: space-between;
+    margin-top: 6px;
+}
+header ul li a:hover{   /*controla quando passa o mouse no menu*/
+    background: #289e2e;    /*cor dos botões interativos*/
+    color: #eee4e4;     /*cor das letras dos botoes interativos*/
+}
+.menu a {   /*controla a parte dos links do menu*/
+    text-decoration: none;  /*tira a underline*/
+    margin-left: 30px;      /*cria espaço entre as letras*/
+    padding: 8px 25px;
+    border-radius: 50px;
+    justify-content: space-between;
+}
+main {
+    position: absolute;    
+    top: 15%;
+    left: 25%;
+    display: block;    
+    width: 50%;
+    background-color: rgb(205, 242, 202);/*cor de fundo post*/
+    border-radius: 20px;
+    box-shadow: 0 8px 5px #000000;
+}
+.caixa-post {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 10px;
+    clear: both;
+}
+.caixa-post h1 {
+    margin-left: auto;
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+    color: darkred;
+    font-size: 150%;
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif;   
+}
+.caixa-post iframe {
+    margin-right: 1%;
+    width: 100%;
+}
+@media screen and (max-width:1065px) {
+    .menu {
+        color:rgb(175, 197, 171);
+
+    }
+    .logo {
+        display: none;
+    }
+    .caixa-post img {
+        width: 95%;
+        margin: 2%;
+    }
+}
+#menuzinho {
+    display: none;
+    position: fixed;
+
+}
+.menu-icon {
+    display: none;
+    position: fixed;
+}
+@media screen and (max-width:720px) {
+    .header {
+        top: 0px;
+        width: 100%;
+        z-index: 1;
+    }
+    .header div {
+        
+        display: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+    .menu .logo{
+        z-index: 1;
+        display: none;
+    }
+    .menu ul {
+        z-index: 1;
+        display: flex;
+        position: fixed;
+        flex-wrap: wrap;
+        align-content: center;
+        top:0px;
+        left: 0px;
+        width: 100%;
+        height: 0%;
+        background: rgba(0, 0, 0, 0.9);
+        overflow: hidden;
+        transition: height 0.3s;
+    }
+    .menu li {
+        display: block;
+        width: 100%;
+        margin-left: -50px;
+        margin-bottom: 40px;
+        color:rgb(149, 201, 233);
+    }   
+    .menu li a {
+        display: block;
+        text-align: center;
+        width: 100%;
+        color:rgb(170, 151, 246);
+        text-shadow: none;
+        font-size: larger;
+
+    }
+    .menu-icon {
+        display: block;
+        color: rgb(25, 12, 173);
+        width: 50px;
+        height: inherit;
+        position: absolute;
+        top:15px;
+        right:30px;
+        line-height: 60px;
+        z-index: 999;
+        position: fixed;
+        text-shadow: 2px 2px 8px rgb(231, 214, 214);
+
+    }
+    .menu-icon i{
+        font-size: 2.7em;
+    }
+    #menuzinho:checked ~ label i:nth-child(2)   {
+        display: block;
+    }
+    #menuzinho:checked ~ label i:first-child   {
+        display: none;
+    }
+    #menuzinho:not(checked) ~ label i:first-child   {
+        display: block;
+    }
+    #menuzinho:not(checked) ~ label i:nth-child(2)   {
+        display: none;
+    }
+    #menuzinho:checked ~ ul {
+        height: 100%;
+    }
+}
